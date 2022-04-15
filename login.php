@@ -2,6 +2,9 @@
 <html>
 <head>
 	<title>Login</title>
+	<meta charset="utf-8">
+  	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link href='https://fonts.googleapis.com/css?family=Almendra' rel='stylesheet'>
 	<link rel="stylesheet" href="style.css">
 </head>
 
