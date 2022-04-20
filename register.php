@@ -24,6 +24,16 @@ if(isset($_POST['submit'])) {
 		echo "<br/>";
 		echo "<a href='register.php'>Refresh</a>";
 	} else {
+		$check = mysqli_query($mysqli, "SELECT username FROM login");
+		while ($x = mysqli_fetch_array($check)) {
+			if ($x['username'] == $user) {
+				echo "Usename has been used previously. Please enter a unique Username.";
+				echo "<br/>";
+				echo "<a href='register.php'>Refresh</a>";
+				exit;
+			}
+		}
+
 		mysqli_query($mysqli, "INSERT INTO login(name, email, username, password) VALUES('$name', '$email', '$user', md5('$pass'))")
 			or die("Could not execute the insert query.");
 			
