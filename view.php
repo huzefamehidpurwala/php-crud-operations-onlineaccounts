@@ -11,7 +11,7 @@ if(!isset($_SESSION['valid'])) {
 include_once("connection.php");
 
 //fetching data in descending order (lastest entry first)
-$result = mysqli_query($mysqli, "SELECT * FROM products WHERE login_id=".$_SESSION['id']." ORDER BY id DESC");
+$result = mysqli_query($mysqli, "SELECT * FROM ORDER BY id DESC");
 ?>
 
 <html>
@@ -34,7 +34,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM products WHERE login_id=".$_SESSI
 		<tr bgcolor='#CCCCCC'>
 			<td>Name</td>
 			<td>Quantity</td>
-			<td>Price</td>
+			<td>Price(₹)</td>
 			<td>Update</td>
 		</tr>
 		<?php
